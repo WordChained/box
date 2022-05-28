@@ -1,0 +1,19 @@
+.app {
+  height: 100vh;
+  width: 100vw;
+}
+.app select {
+  width: 300px;
+  /* height: 50px; */
+  font-size: 1.5rem;
+  margin-top: 10px;
+  margin-left: 20px;
+  border-radius: 3em;
+  padding: 5px 20px;
+}
+:root {
+  --purple: rgb(139, 127, 186);
+  --modal-black: rgb(47, 44, 44);
+  --warning: rgb(243, 95, 95);
+  --validated: rgb(63, 221, 161);
+}

@@ -1,0 +1,154 @@
+.messagesContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.messageBoard {
+  background-color: #262626;
+  height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+form {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -70px;
+  left: 0;
+}
+.messagesContainer input {
+  border: none;
+  height: 60px;
+  width: 300px;
+  font-size: 1.3rem;
+  font-weight: 600;
+  text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px, #fff 0px 0px 15px,
+    #ff2d95 0px 0px 20px, #ff2d95 0px 0px 30px, #ff2d95 0px 0px 40px,
+    #ff2d95 0px 0px 50px, #ff2d95 0px 0px 75px;
+  color: green;
+  padding: 10px;
+  border-radius: 3em;
+  outline: none;
+  z-index: 1;
+  position: relative;
+  background-color: silver;
+  background-image: radial-gradient(
+      circle at 100% 150%,
+      silver 24%,
+      white 24%,
+      white 28%,
+      silver 28%,
+      silver 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 150%,
+      silver 24%,
+      white 24%,
+      white 28%,
+      silver 28%,
+      silver 36%,
+      white 36%,
+      white 40%,
+      transparent 40%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      white 10%,
+      silver 10%,
+      silver 23%,
+      white 23%,
+      white 30%,
+      silver 30%,
+      silver 43%,
+      white 43%,
+      white 50%,
+      silver 50%,
+      silver 63%,
+      white 63%,
+      white 71%,
+      transparent 71%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 100% 50%,
+      white 5%,
+      silver 5%,
+      silver 15%,
+      white 15%,
+      white 20%,
+      silver 20%,
+      silver 29%,
+      white 29%,
+      white 34%,
+      silver 34%,
+      silver 44%,
+      white 44%,
+      white 49%,
+      transparent 49%,
+      transparent
+    ),
+    radial-gradient(
+      circle at 0 50%,
+      white 5%,
+      silver 5%,
+      silver 15%,
+      white 15%,
+      white 20%,
+      silver 20%,
+      silver 29%,
+      white 29%,
+      white 34%,
+      silver 34%,
+      silver 44%,
+      white 44%,
+      white 49%,
+      transparent 49%,
+      transparent
+    );
+  background-size: 70px 30px;
+}
+.messagesContainer button:disabled {
+  background-color: rgb(227, 183, 191);
+  color: rgb(151, 149, 149);
+}
+.messagesContainer button {
+  position: relative;
+  height: 60px;
+  border: none;
+  border-radius: 3em;
+  padding-left: 60px;
+  padding-right: 17px;
+  font-size: 1.1rem;
+  z-index: 0;
+  margin-left: -102px;
+  background-color: rgb(251, 58, 90);
+  cursor: pointer;
+  transition: all 0.3s linear;
+  top: 0.5px;
+  color: white;
+}
+.messageBoard > * {
+  display: flex;
+  flex-wrap: wrap;
+  /* word-break: break-all; */
+  background-color: rgba(255, 255, 255, 0.083);
+  padding: 5px;
+}
+
+.messagesContainer button:hover {
+  margin-left: -55px;
+}

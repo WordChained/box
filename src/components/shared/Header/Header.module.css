@@ -1,0 +1,32 @@
+.headerContainer {
+  width: 100%;
+  background-color: var(--purple);
+  display: flex;
+  height: 4rem;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.headerContainer nav {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.headerContainer a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  margin: 0 20px;
+}
+.miniNav {
+  display: flex;
+  gap: 10px;
+}
+.headerContainer a:hover {
+  color: gold;
+}
+.headerContainer a .active {
+  text-decoration: underline;
+  color: gold;
+}

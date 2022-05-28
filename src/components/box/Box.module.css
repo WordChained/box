@@ -1,0 +1,23 @@
+.boxContainer {
+  display: block;
+  height: 500px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.boxContainer span {
+  color: black;
+  font-size: 2rem;
+  background-color: rgb(61, 243, 179);
+  padding: 10px;
+  border-radius: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
