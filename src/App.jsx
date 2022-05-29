@@ -75,7 +75,7 @@ function App() {
           <Route path='/login' element={<LoginPage />} />
           <Route path='/rooms' element={<Rooms />} />
           <Route path='/about-us' element={<AboutUs />} />
-          {/* <Route path='/chatroom' element={<Chatroom />} /> */}
+          <Route path='/rooms/room/:id' element={<Chatroom />} />
         </Routes>
         <Footer />
       </BrowserRouter>

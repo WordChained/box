@@ -3,6 +3,7 @@
   height: calc(100vh - 8rem);
   display: flex;
   align-self: center;
+  margin: 0 auto;
 }
 .chatroomMainContainer {
   width: 100%;

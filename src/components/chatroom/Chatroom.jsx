@@ -1,26 +1,27 @@
-import React, { useState } from "react";
-import styles from "./Chatroom.module.css";
-import { ChatroomMain } from "./ChatroomMain";
-import { ChatroomUsers } from "./ChatroomUsers";
-import { nanoid } from "nanoid";
-import { InstantMessageModal } from "./InstantMessageModal";
-
+import React, { useState } from 'react';
+import styles from './Chatroom.module.css';
+import { ChatroomMain } from './ChatroomMain';
+import { ChatroomUsers } from './ChatroomUsers';
+import { nanoid } from 'nanoid';
+import { InstantMessageModal } from './InstantMessageModal';
+import { useParams } from 'react-router';
 export const Chatroom = () => {
+  const { id } = useParams();
+  const roomName = 'Bananas';
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [targetUser, setTargetUser] = useState(null);
-  const roomName = "Bananas";
-  const myUser = { username: "Tal", id: "12345678" };
+  const myUser = { username: 'Tal', id: '12345678' };
   const users = [
-    { username: "Moshe", id: nanoid() },
-    { username: "Natan", id: nanoid() },
-    { username: "Sior", id: nanoid() },
-    { username: "Michal", id: nanoid() },
+    { username: 'Moshe', id: nanoid() },
+    { username: 'Natan', id: nanoid() },
+    { username: 'Sior', id: nanoid() },
+    { username: 'Michal', id: nanoid() },
   ];
   const [messages, setMessages] = useState([
-    { message: "hi", id: nanoid(), user: users[1] },
-    { message: "hello", id: nanoid(), user: myUser },
-    { message: "CRAZY", id: nanoid(), user: users[3] },
-    { message: "YEAH!", id: nanoid(), user: users[2] },
+    { message: 'hi', id: nanoid(), user: users[1] },
+    { message: 'hello', id: nanoid(), user: myUser },
+    { message: 'CRAZY', id: nanoid(), user: users[3] },
+    { message: 'YEAH!', id: nanoid(), user: users[2] },
   ]);
   const addMessage = (message) => {
     const newMessage = { message, id: myUser.id, user: myUser };
