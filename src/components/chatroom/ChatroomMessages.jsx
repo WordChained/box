@@ -1,19 +1,17 @@
-import React from 'react';
-import styles from './Chatroom.module.css';
+import React from "react";
+import styles from "./Chatroom.module.css";
+import { Message } from "./Message";
 
-export const ChatroomMessages = ({ messages, myUser }) => {
+export const ChatroomMessages = ({ messages, myUser, removeMessage }) => {
   return (
     <div className={styles.chatroomMessages}>
       {messages.map((msg) => (
-        <div
-          className={`${styles.message} ${
-            msg.user.id === myUser.id ? styles.myMessage : ''
-          }`}
+        <Message
           key={msg.id}
-        >
-          <span className={styles.name}>{msg.user.username}</span>
-          {msg.message}
-        </div>
+          msg={msg}
+          myUser={myUser}
+          removeMessage={removeMessage}
+        />
       ))}
     </div>
   );

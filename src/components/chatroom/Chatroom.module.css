@@ -9,6 +9,9 @@
   height: calc(100vh - 8rem);
   align-self: center;
   flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 .chatroomMainContainer h3 {
   padding: 0 1rem;
@@ -24,13 +27,16 @@
 .chatroomUsersContainer .user {
   padding: 0.5rem;
   margin: 0.5rem 0;
+  cursor: pointer;
 }
 .chatroomUsersContainer .user:hover {
-  background-color: #ccc;
+  background-color: var(--purple);
 }
 .chatroomMainContainer .chatroomMessages {
   display: flex;
   flex-direction: column;
+  flex: 19;
+  overflow: auto;
 }
 .chatroomMainContainer .message {
   background-color: rgb(12, 165, 111);
@@ -44,6 +50,15 @@
 .chatroomMainContainer .myMessage {
   background-color: gold;
   align-self: flex-end;
+  padding-right: 40px;
+  position: relative;
+}
+.myMessage .remove {
+  position: absolute;
+  top: 2px;
+  right: 2px;
+  font-size: 0.8rem;
+  cursor: pointer;
 }
 .chatroomMessages .name {
   color: black;

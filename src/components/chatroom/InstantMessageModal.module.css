@@ -1,0 +1,44 @@
+.backgroundCover {
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  height: calc(100vh - 8rem);
+  width: 100vw;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.584);
+}
+.instantMessageModalContainer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: var(--modal-black);
+  padding: 10px;
+  border-radius: 10px;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 10;
+}
+.instantMessageModalContainer h3 {
+  text-align: center;
+}
+
+.instantMessageModalContainer form {
+  align-self: flex-end;
+  height: max-content;
+}
+.user {
+  display: flex;
+  color: gold;
+  gap: 5px;
+  align-items: center;
+  font-size: 1.3rem;
+  width: 100%;
+  box-shadow: 0 3px 1px -2px whitesmoke;
+  padding: 5px;
+}
+.user img {
+  height: 40px;
+}

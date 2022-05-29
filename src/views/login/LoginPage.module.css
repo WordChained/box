@@ -72,4 +72,5 @@
 .submitBtn:disabled {
   background-color: grey;
   color: rgb(90, 90, 90);
+  cursor: default;
 }

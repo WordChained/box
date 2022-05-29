@@ -1,0 +1,8 @@
+.usersFilterContainer {
+}
+.usersFilterContainer input {
+  outline: none;
+  border: none;
+  height: 30px;
+  font-size: 1rem;
+}

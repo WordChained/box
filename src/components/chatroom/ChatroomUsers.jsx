@@ -1,11 +1,18 @@
-import React from 'react';
-import styles from './Chatroom.module.css';
-export const ChatroomUsers = ({ users }) => {
+import React, { useState } from "react";
+import styles from "./Chatroom.module.css";
+import { UsersFilter } from "./UsersFilter";
+export const ChatroomUsers = ({ users, toggleInstantMessageModal }) => {
+  const [filteredUsers, setFilteredUsers] = useState(users);
   return (
     <div className={styles.chatroomUsersContainer}>
       <h3>Users</h3>
-      {users.map((user) => (
-        <div key={user.id} className={styles.user}>
+      <UsersFilter setFilteredUsers={setFilteredUsers} users={users} />
+      {filteredUsers.map((user) => (
+        <div
+          key={user.id}
+          className={styles.user}
+          onClick={() => toggleInstantMessageModal(user)}
+        >
           {user.username}
         </div>
       ))}
