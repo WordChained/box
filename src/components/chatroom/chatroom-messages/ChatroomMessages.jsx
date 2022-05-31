@@ -1,7 +1,7 @@
-import React, { useContext } from "react";
-import { ChatroomsContext } from "../../store/contexts/ChatroomsContext";
-import styles from "./Chatroom.module.css";
-import { Message } from "./Message";
+import React, { useContext } from 'react';
+import { ChatroomsContext } from '../../../store/contexts/ChatroomsContext';
+import styles from '../Chatroom.module.css';
+import { Message } from './Message';
 
 export const ChatroomMessages = ({ myUser }) => {
   const { chatroomState } = useContext(ChatroomsContext);

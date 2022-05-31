@@ -17,3 +17,6 @@
   --warning: rgb(243, 95, 95);
   --validated: rgb(63, 221, 161);
 }
+a {
+  cursor: pointer;
+}

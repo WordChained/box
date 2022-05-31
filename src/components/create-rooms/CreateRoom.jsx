@@ -1,5 +1,5 @@
 import React from 'react';
-import { AddMessage } from '../chatroom/AddMessage';
+import { AddMessage } from '../chatroom/add-message/AddMessage';
 import styles from './CreateRoom.module.css';
 export const CreateRoom = () => {
   const createRoom = (roomName) => {
