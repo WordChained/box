@@ -69,7 +69,8 @@
   text-decoration: underline;
   cursor: pointer;
 }
-.submitBtn:disabled {
+.submitBtn:disabled,
+.loginButton:disabled {
   background-color: grey;
   color: rgb(90, 90, 90);
   cursor: default;

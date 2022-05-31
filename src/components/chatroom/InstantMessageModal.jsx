@@ -6,10 +6,12 @@ export const InstantMessageModal = ({ user, toggleInstantMessageModal }) => {
   const addMessage = () => {
     toggleInstantMessageModal(null);
   };
+
   const closeModal = (ev) => {
     if (ev.target.id !== "coverscreen") return;
     toggleInstantMessageModal();
   };
+
   return (
     <div
       id="coverscreen"

@@ -1,7 +1,10 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import { ChatroomsContext } from "../../store/contexts/ChatroomsContext";
 import styles from "./Chatroom.module.css";
 import { UsersFilter } from "./UsersFilter";
-export const ChatroomUsers = ({ users, toggleInstantMessageModal }) => {
+export const ChatroomUsers = ({ toggleInstantMessageModal }) => {
+  const { chatroomState } = useContext(ChatroomsContext);
+  const users = chatroomState.users;
   const [filteredUsers, setFilteredUsers] = useState(users);
   return (
     <div className={styles.chatroomUsersContainer}>

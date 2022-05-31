@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { removeMessageAction } from "../../store/actions/roomsActions";
+import { ChatroomsContext } from "../../store/contexts/ChatroomsContext";
 import styles from "./Chatroom.module.css";
 
-export const Message = ({ msg, myUser, removeMessage }) => {
+export const Message = ({ msg }) => {
+  const { chatroomState, chatroomDispatch } = useContext(ChatroomsContext);
+  const myUser = chatroomState.loggedInUser;
+  const removeMessage = () => {
+    chatroomDispatch(removeMessageAction(msg.id));
+  };
   return (
     <div
       className={`${styles.message} ${
