@@ -1,5 +1,5 @@
 export const initialLoginState = {
-  user: {},
+  user: undefined,
 };
 export const loginReducer = (state = initialLoginState, action) => {
   switch (action.type) {

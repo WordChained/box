@@ -7,7 +7,7 @@ export const Header = () => {
   const [loginTitle, setLoginTitle] = useState("Login");
   console.log(loginState);
   useEffect(() => {
-    if (loginState.user.username) setLoginTitle("Logout");
+    if (loginState.user) setLoginTitle("Logout");
     else setLoginTitle("Login");
   }, [loginState.user]);
 
