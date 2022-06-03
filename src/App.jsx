@@ -9,6 +9,7 @@ import { Home } from './views/home/Home';
 
 import { LoginContextProvider } from './store/contexts/LoginContext';
 import { ChatroomLoader } from './store/loaders/ChatroomLoader';
+import { PrivateRoute } from './components/shared/PrivateRoute';
 function App() {
   return (
     <LoginContextProvider>
@@ -18,9 +19,23 @@ function App() {
           <Routes>
             <Route path='' element={<Home />} />
             <Route path='/login' element={<LoginPage />} />
-            <Route path='/rooms' element={<Rooms />} />
+            <Route
+              path='/rooms'
+              element={
+                <PrivateRoute>
+                  <Rooms />
+                </PrivateRoute>
+              }
+            />
             <Route path='/about-us' element={<AboutUs />} />
-            <Route path='/rooms/room/:roomName' element={<ChatroomLoader />} />
+            <Route
+              path='/rooms/room/:roomName'
+              element={
+                <PrivateRoute>
+                  <ChatroomLoader />
+                </PrivateRoute>
+              }
+            />
           </Routes>
           <Footer />
         </BrowserRouter>
